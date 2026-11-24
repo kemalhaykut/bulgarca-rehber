@@ -1,0 +1,599 @@
+<title>Bulgarca Rehber</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600;700&family=Literata:opsz,wght@7..72,400;7..72,500;7..72,600&display=swap">
+<style>
+/* Düzen: solda ders listesi (telefonda çekmece), sağda okuma sütunu; Bulgarca metin serif, açıklamalar sans. */
+:root {
+  --bg: #f4f6f3; --panel: #ffffff; --ink: #1b2420; --soft: #5b6863; --line: #dde3df;
+  --accent: #007a57; --accent-ink: #ffffff; --accent-soft: #e2f2ec; --word: #00684a;
+  --red: #c8102e; --red-soft: #fbe7ea; --gold: #a86f00; --gold-soft: #fbf1dc;
+  --pop: #1b2420; --pop-ink: #f4f6f3; --shadow: 0 10px 30px rgba(20, 40, 30, .16);
+  --f-ui: "Commissioner", "Segoe UI", Roboto, system-ui, sans-serif;
+  --f-bg: "Literata", "Noto Serif", Georgia, "Times New Roman", serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #101614; --panel: #18201d; --ink: #e5ece8; --soft: #9aa8a2; --line: #2a3531;
+  --accent: #3fbf8f; --accent-ink: #08130e; --accent-soft: #1b3229; --word: #6fd6ad;
+  --red: #ff6b7f; --red-soft: #3a1d22; --gold: #f0b54a; --gold-soft: #33290f;
+  --pop: #e5ece8; --pop-ink: #101614; --shadow: 0 10px 30px rgba(0,0,0,.5); color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #101614; --panel: #18201d; --ink: #e5ece8; --soft: #9aa8a2; --line: #2a3531;
+  --accent: #3fbf8f; --accent-ink: #08130e; --accent-soft: #1b3229; --word: #6fd6ad;
+  --red: #ff6b7f; --red-soft: #3a1d22; --gold: #f0b54a; --gold-soft: #33290f;
+  --pop: #e5ece8; --pop-ink: #101614; --shadow: 0 10px 30px rgba(0,0,0,.5); color-scheme: dark }
+/* Kullanıcının seçtiği temalar (sistem temasını ezer) */
+:root[data-skin="light"] {
+  --bg: #f4f6f3; --panel: #ffffff; --ink: #1b2420; --soft: #5b6863; --line: #dde3df;
+  --accent: #007a57; --accent-ink: #ffffff; --accent-soft: #e2f2ec; --word: #00684a;
+  --red: #c8102e; --red-soft: #fbe7ea; --gold: #a86f00; --gold-soft: #fbf1dc;
+  --pop: #1b2420; --pop-ink: #f4f6f3; color-scheme: light }
+:root[data-skin="dark"] {
+  --bg: #101614; --panel: #18201d; --ink: #e5ece8; --soft: #9aa8a2; --line: #2a3531;
+  --accent: #3fbf8f; --accent-ink: #08130e; --accent-soft: #1b3229; --word: #6fd6ad;
+  --red: #ff6b7f; --red-soft: #3a1d22; --gold: #f0b54a; --gold-soft: #33290f;
+  --pop: #e5ece8; --pop-ink: #101614; color-scheme: dark }
+:root[data-skin="sepia"] {
+  --bg: #f3ead8; --panel: #fbf5e8; --ink: #3a2c1e; --soft: #7a6650; --line: #e3d5bc;
+  --accent: #8a4b1f; --accent-ink: #fff8ee; --accent-soft: #f0dfc6; --word: #7a3f16;
+  --red: #b3261e; --red-soft: #f6dcd6; --gold: #8a6100; --gold-soft: #f1e3bf;
+  --pop: #3a2c1e; --pop-ink: #fbf5e8; color-scheme: light }
+:root[data-skin="night"] {
+  --bg: #0c1424; --panel: #121d31; --ink: #dde7f6; --soft: #93a3bd; --line: #22304a;
+  --accent: #79a9ff; --accent-ink: #0a1222; --accent-soft: #1a2a47; --word: #9cc0ff;
+  --red: #ff7d8c; --red-soft: #3a1d2b; --gold: #f2c25a; --gold-soft: #322a14;
+  --pop: #dde7f6; --pop-ink: #0c1424; color-scheme: dark }
+:root[data-skin="contrast"] {
+  --bg: #000000; --panel: #0d0d0d; --ink: #ffffff; --soft: #cfcfcf; --line: #3a3a3a;
+  --accent: #ffd400; --accent-ink: #000000; --accent-soft: #2b2600; --word: #ffe24d;
+  --red: #ff6670; --red-soft: #3a0f14; --gold: #ffd400; --gold-soft: #2b2600;
+  --pop: #ffffff; --pop-ink: #000000; color-scheme: dark }
+
+* { box-sizing: border-box }
+html, body { height: 100% }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.6 var(--f-ui); -webkit-text-size-adjust: 100% }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--panel) }
+button { font: inherit; color: inherit }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px }
+
+/* üst çubuk */
+.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--panel); border-bottom: 1px solid var(--line);
+  display: flex; align-items: center; gap: 10px; padding-block: 8px;
+  padding-left: max(12px, env(safe-area-inset-left, 0px)); padding-right: max(12px, env(safe-area-inset-right, 0px)) }
+.top .logo { width: 34px; height: 34px; border-radius: 9px; flex: none }
+.top h1 { font-size: 17px; margin: 0; font-weight: 700; letter-spacing: .01em; white-space: nowrap }
+.top .sub { font-size: 12px; color: var(--soft); white-space: nowrap; overflow: hidden; text-overflow: ellipsis }
+.top .grow { flex: 1; min-width: 0 }
+.iconbtn { border: 1px solid var(--line); background: var(--panel); border-radius: 10px; height: 38px; min-width: 38px; padding: 0 10px;
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px; cursor: pointer; font-size: 14px; font-weight: 600 }
+.iconbtn:hover { border-color: var(--accent) }
+.iconbtn svg { width: 20px; height: 20px }
+#menuBtn { display: none }
+
+/* ana düzen */
+.wrap { display: grid; grid-template-columns: 290px minmax(0, 1fr); min-height: calc(100% - 56px) }
+nav.side { border-right: 1px solid var(--line); background: var(--panel); padding: 14px 10px 40px; position: sticky;
+  top: calc(env(safe-area-inset-top, 0px) + 55px); height: calc(100vh - 55px - env(safe-area-inset-top, 0px)); overflow-y: auto }
+.lvl { font-size: 12px; font-weight: 700; letter-spacing: .12em; color: var(--soft); text-transform: uppercase; margin: 14px 10px 6px; display: flex; justify-content: space-between }
+.lesson { display: grid; grid-template-columns: 30px 1fr auto; gap: 8px; align-items: center; width: 100%; text-align: left;
+  border: 0; background: transparent; padding: 8px 10px; border-radius: 10px; cursor: pointer }
+.lesson:hover { background: var(--accent-soft) }
+.lesson.on { background: var(--accent); color: var(--accent-ink) }
+.lesson .n { font-weight: 700; font-variant-numeric: tabular-nums; font-size: 14px; text-align: center; border-radius: 8px; padding: 2px 0; border: 1px solid var(--line) }
+.lesson.on .n { border-color: transparent }
+.lesson .tt { min-width: 0 }
+.lesson .t1 { font-size: 14px; font-weight: 600; line-height: 1.3 }
+.lesson .t2 { font: 13px/1.3 var(--f-bg); opacity: .75 }
+.lesson .st { font-size: 13px }
+.side .foot { margin: 22px 10px 0; font-size: 12px; color: var(--soft); line-height: 1.5 }
+
+main { min-width: 0; padding-block: 22px 80px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)) }
+.col { max-width: 760px; margin: 0 auto }
+.head .ref { font-size: 13px; font-weight: 700; color: var(--accent); letter-spacing: .06em; text-transform: uppercase }
+.head h2 { font-size: clamp(24px, 4vw, 32px); line-height: 1.2; margin: 4px 0 2px; text-wrap: balance }
+.head .bgt { font: 500 20px/1.3 var(--f-bg); color: var(--soft) }
+.head .goal { margin: 12px 0 0; color: var(--soft) }
+
+.tabs { display: flex; gap: 6px; margin: 22px 0 18px; border-bottom: 1px solid var(--line); overflow-x: auto; scrollbar-width: none }
+.tab { border: 0; background: none; padding: 10px 12px; font-weight: 600; color: var(--soft); border-bottom: 3px solid transparent; cursor: pointer; white-space: nowrap }
+.tab.on { color: var(--ink); border-bottom-color: var(--accent) }
+.tab .cnt { font-size: 12px; font-weight: 700; margin-left: 6px; color: var(--accent) }
+
+.hint { display: flex; gap: 10px; align-items: flex-start; font-size: 14px; color: var(--soft); background: var(--accent-soft); border-radius: 12px; padding: 10px 14px; margin-bottom: 18px }
+.hint b { color: var(--ink) }
+.hint .x { margin-left: auto; border: 0; background: none; cursor: pointer; color: var(--soft); font-size: 18px; line-height: 1 }
+
+/* bloklar */
+.block { margin: 0 0 26px }
+.block > h3 { font-size: 19px; margin: 0 0 10px; line-height: 1.3 }
+.prose p { margin: 0 0 10px }
+.prose b { font-weight: 700 }
+.prose .bgline { font-family: var(--f-bg) }
+.callout { border-radius: 14px; padding: 14px 16px; border-left: 5px solid var(--accent); background: var(--panel) }
+.callout.tr { border-left-color: var(--red); background: var(--red-soft) }
+.callout.warn { border-left-color: var(--gold); background: var(--gold-soft) }
+.callout.key { border-left-color: var(--accent); background: var(--accent-soft) }
+.callout .tag { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 4px; display: block }
+.callout.tr .tag { color: var(--red) } .callout.warn .tag { color: var(--gold) } .callout.key .tag { color: var(--accent) }
+
+.tbl { overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; background: var(--panel) }
+table { border-collapse: collapse; width: 100%; font-size: 15px }
+th { text-align: left; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--soft); padding: 9px 12px; border-bottom: 1px solid var(--line); white-space: nowrap }
+td { padding: 8px 12px; border-bottom: 1px solid var(--line); vertical-align: top }
+tr:last-child td { border-bottom: 0 }
+td.bgc { font-family: var(--f-bg); font-size: 16.5px }
+.note { font-size: 14px; color: var(--soft); margin-top: 8px }
+
+.exs { display: grid; gap: 2px; background: var(--panel); border: 1px solid var(--line); border-radius: 14px; overflow: hidden }
+.ex { padding: 11px 16px; border-bottom: 1px solid var(--line) }
+.ex:last-child { border-bottom: 0 }
+.ex .b { font: 18px/1.45 var(--f-bg) }
+.ex .p { font-size: 13px; color: var(--soft); letter-spacing: .02em; font-variant-ligatures: none }
+.ex .t { font-size: 15px; color: var(--soft); font-style: italic }
+.hidep .p { display: none }
+
+/* kelime */
+.w { color: inherit; text-decoration: underline dotted color-mix(in srgb, var(--word) 55%, transparent); text-underline-offset: 4px; text-decoration-thickness: 1.5px;
+  cursor: pointer; -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; border-radius: 4px; transition: background .12s }
+.w:hover, .w.act { background: var(--accent-soft); color: var(--word) }
+.w.press { background: color-mix(in srgb, var(--accent) 25%, transparent) }
+
+/* okuma */
+.read-tools { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px }
+.toggle { border: 1px solid var(--line); background: var(--panel); border-radius: 999px; padding: 6px 14px; font-size: 14px; font-weight: 600; cursor: pointer }
+.toggle.on { background: var(--accent); border-color: var(--accent); color: var(--accent-ink) }
+.story { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 20px 22px }
+.story h3 { font: 600 24px/1.3 var(--f-bg); margin: 0 }
+.story .st2 { color: var(--soft); font-size: 14px; margin-bottom: 14px }
+.sent { padding: 6px 0 }
+.sent .b { font: 19px/1.65 var(--f-bg) }
+.sent .p { font-size: 13px; color: var(--soft) }
+.sent .t { font-size: 15px; color: var(--soft); font-style: italic; border-left: 3px solid var(--accent-soft); padding-left: 10px; margin: 2px 0 4px }
+.sent .rv { border: 0; background: none; color: var(--accent); font-size: 13px; font-weight: 600; cursor: pointer; padding: 0 }
+.notes { margin-top: 18px }
+.notes li { margin-bottom: 6px }
+
+/* alıştırma */
+.qcard { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 16px 18px; margin-bottom: 14px }
+.qcard .qn { font-size: 12px; font-weight: 700; color: var(--soft); letter-spacing: .08em; text-transform: uppercase }
+.qcard .qt { font: 20px/1.5 var(--f-bg); margin: 6px 0 4px }
+.qcard .qtr { font-size: 14px; color: var(--soft); font-style: italic; margin-bottom: 10px }
+.blank { display: inline-block; min-width: 3.2em; border-bottom: 2px solid var(--accent); text-align: center; color: var(--accent); font-weight: 600 }
+.opts { display: flex; flex-wrap: wrap; gap: 8px }
+.opt { border: 1.5px solid var(--line); background: var(--bg); border-radius: 12px; padding: 8px 14px; font: 17px/1.3 var(--f-bg); cursor: pointer; text-align: left }
+.opt:hover:not(:disabled) { border-color: var(--accent) }
+.opt.ok { border-color: var(--accent); background: var(--accent-soft) }
+.opt.no { border-color: var(--red); background: var(--red-soft) }
+.opt:disabled { cursor: default }
+.fb { margin-top: 10px; font-size: 15px; border-radius: 10px; padding: 8px 12px }
+.fb.ok { background: var(--accent-soft) } .fb.no { background: var(--red-soft) }
+.fb .ans { font-family: var(--f-bg); font-size: 17px }
+.ord-out { min-height: 48px; border: 1.5px dashed var(--line); border-radius: 12px; padding: 6px; display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px }
+.chip { border: 1.5px solid var(--line); background: var(--panel); border-radius: 10px; padding: 6px 12px; font: 17px var(--f-bg); cursor: pointer }
+.chip.used { visibility: hidden }
+.qbar { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap }
+.btn { border: 0; background: var(--accent); color: var(--accent-ink); border-radius: 12px; padding: 9px 16px; font-weight: 700; cursor: pointer }
+.btn.ghost { background: transparent; color: var(--ink); border: 1px solid var(--line) }
+.score { display: flex; align-items: center; gap: 14px; background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 16px 18px; margin-bottom: 16px }
+.score .big { font-size: 34px; font-weight: 700; font-variant-numeric: tabular-nums; color: var(--accent) }
+.pager { display: flex; justify-content: space-between; gap: 10px; margin-top: 34px; padding-top: 18px; border-top: 1px solid var(--line) }
+.pager button { max-width: 48% }
+
+/* sözlük kutusu */
+#pop { position: fixed; z-index: 50; max-width: min(340px, calc(100vw - 24px)); background: var(--pop); color: var(--pop-ink); border-radius: 14px; padding: 12px 14px 12px;
+  box-shadow: var(--shadow); display: none; font-size: 14px; line-height: 1.45 }
+#pop.on { display: block; animation: pop .14s ease-out }
+@keyframes pop { from { transform: translateY(4px) scale(.98); opacity: 0 } }
+#pop .pw { font: 600 22px/1.2 var(--f-bg) }
+#pop .sv { text-decoration: underline; text-decoration-thickness: 2.5px; text-underline-offset: 4px }
+#pop .pp { font-size: 12.5px; opacity: .75; letter-spacing: .03em }
+#pop .ptr { font-size: 16px; font-weight: 700; margin-top: 6px }
+#pop .pg { font-size: 13px; opacity: .85; margin-top: 2px }
+#pop .pl { font-size: 13px; margin-top: 2px; opacity: .85 }
+#pop .pn { font-size: 13px; margin-top: 6px; padding-top: 6px; border-top: 1px solid color-mix(in srgb, var(--pop-ink) 25%, transparent) }
+#pop .alt { margin-top: 8px; padding-top: 8px; border-top: 1px dashed color-mix(in srgb, var(--pop-ink) 30%, transparent) }
+#pop .say { float: right; border: 0; border-radius: 8px; background: color-mix(in srgb, var(--pop-ink) 15%, transparent); color: inherit; cursor: pointer; padding: 3px 8px; font-size: 13px }
+
+/* tema menüsü */
+#skinMenu { position: fixed; z-index: 40; right: max(12px, env(safe-area-inset-right, 0px)); top: calc(env(safe-area-inset-top, 0px) + 58px);
+  background: var(--panel); border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow); padding: 8px; display: none; min-width: 210px }
+#skinMenu.on { display: block }
+.skin { display: flex; align-items: center; gap: 10px; width: 100%; border: 0; background: none; padding: 8px 10px; border-radius: 10px; cursor: pointer; text-align: left; font-size: 15px }
+.skin:hover { background: var(--accent-soft) }
+.skin .sw { width: 22px; height: 22px; border-radius: 50%; border: 1px solid var(--line); flex: none }
+.skin.on { font-weight: 700 }
+.skin.on::after { content: "✓"; margin-left: auto; color: var(--accent) }
+.fs { display: flex; gap: 6px; padding: 8px 10px 4px; border-top: 1px solid var(--line); margin-top: 6px; align-items: center; font-size: 14px; color: var(--soft) }
+.fs button { border: 1px solid var(--line); background: var(--bg); border-radius: 8px; width: 34px; height: 30px; cursor: pointer; font-weight: 700 }
+
+.scrim { position: fixed; inset: 0; background: rgba(0,0,0,.35); z-index: 25; display: none }
+
+@media (max-width: 560px) {
+  .tabs { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 0 }
+  .tab { white-space: normal; font-size: 14px; line-height: 1.25; padding: 8px 4px; text-align: center }
+}
+@media (max-width: 860px) {
+  .wrap { grid-template-columns: minmax(0, 1fr) }
+  #menuBtn { display: inline-flex }
+  nav.side { position: fixed; top: 0; left: 0; bottom: 0; height: 100%; width: min(320px, 86vw); z-index: 26;
+    transform: translateX(-102%); transition: transform .2s ease; padding-top: calc(env(safe-area-inset-top, 0px) + 14px); padding-left: max(10px, env(safe-area-inset-left, 0px)) }
+  body.menu nav.side { transform: none; box-shadow: var(--shadow) }
+  body.menu .scrim { display: block }
+  .story { padding: 16px }
+}
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important } }
+</style>
+
+<header class="top">
+  <button class="iconbtn" id="menuBtn" aria-label="Dersler">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+  <img class="logo" src="icon.png" alt="">
+  <div class="grow">
+    <h1>Bulgarca Rehber</h1>
+    <div class="sub" id="topSub">A1–A2 · Türkçe anlatımlı dilbilgisi</div>
+  </div>
+  <button class="iconbtn" id="skinBtn" aria-label="Tema">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 0 0 16z" fill="currentColor"/></svg>
+    <span>Tema</span>
+  </button>
+</header>
+
+<div id="skinMenu" role="menu"></div>
+<div class="scrim" id="scrim"></div>
+
+<div class="wrap">
+  <nav class="side" id="side" aria-label="Dersler"></nav>
+  <main><div class="col" id="view"></div></main>
+</div>
+
+<div id="pop" role="dialog" aria-live="polite"></div>
+
+<script src="data.js"></script>
+<script>
+(function () {
+  'use strict';
+  var D = window.REHBER_DATA || { modules: [], dict: {} };
+  var MODS = D.modules, DICT = D.dict;
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+
+  // ---------------- kalıcı ayarlar (her şey try/catch içinde) ----------------
+  var KEY = 'bulgarca-rehber-v1';
+  var S = { skin: 'auto', fs: 0, last: null, seen: {}, best: {}, hint: true, showTr: false, showP: true };
+  try { var saved = JSON.parse(localStorage.getItem(KEY) || 'null'); if (saved) for (var k in saved) S[k] = saved[k]; } catch (e) {}
+  function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} }
+
+  // ---------------- metin → etkileşimli kelimeler ----------------
+  var CYR = /[а-яА-ЯѝЍ]/;
+  function esc(s) { return s.replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+
+  // **kalın** işaretleri kelimeyi bölse bile kelime tek parça kalsın diye karakter karakter işlenir
+  function rich(str) {
+    var chars = [], bold = false;
+    for (var i = 0; i < str.length; i++) {
+      if (str[i] === '*' && str[i + 1] === '*') { bold = !bold; i++; continue; }
+      chars.push([str[i], bold]);
+    }
+    var out = '', j = 0;
+    function run(a, b) {  // a..b arası, kalınlık parçalarıyla
+      var s = '', cur = null, buf = '';
+      for (var x = a; x < b; x++) {
+        if (chars[x][1] !== cur) { if (buf) s += cur ? '<b>' + esc(buf) + '</b>' : esc(buf); buf = ''; cur = chars[x][1]; }
+        buf += chars[x][0];
+      }
+      if (buf) s += cur ? '<b>' + esc(buf) + '</b>' : esc(buf);
+      return s;
+    }
+    while (j < chars.length) {
+      if (CYR.test(chars[j][0])) {
+        var a = j; while (j < chars.length && CYR.test(chars[j][0])) j++;
+        var word = chars.slice(a, j).map(function (c) { return c[0]; }).join('');
+        var prevDash = a > 0 && chars[a - 1][0] === '-';
+        var pre = '';
+        // по-голям / най-добрият: önek + kelime tek kutu
+        if (prevDash && a >= 3) {
+          var p2 = chars.slice(Math.max(0, a - 4), a - 1).map(function (c) { return c[0]; }).join('').toLowerCase();
+          if (/(^|[^а-я])по$/.test(p2) || p2 === 'по') pre = 'по'; else if (/най$/.test(p2)) pre = 'най';
+        }
+        var key = word.toLowerCase();
+        if (DICT[key] && !(prevDash && !pre)) {
+          out += '<span class="w" data-k="' + esc(key) + '"' + (pre ? ' data-pre="' + pre + '"' : '') + ' lang="bg">' + run(a, j) + '</span>';
+        } else out += run(a, j);
+      } else {
+        var b2 = j; while (j < chars.length && !CYR.test(chars[j][0])) j++;
+        out += run(b2, j);
+      }
+    }
+    return out;
+  }
+  function richBlock(str) {
+    return str.split(/\n+/).map(function (line) { return '<p>' + rich(line) + '</p>'; }).join('');
+  }
+
+  // ---------------- sözlük kutusu: dokun ya da basılı tut ----------------
+  var pop = $('#pop'), popFor = null, popY = 0;
+  var canSpeak = false;
+  try {
+    if ('speechSynthesis' in window) {
+      var pickVoice = function () { var v = speechSynthesis.getVoices().filter(function (v) { return /^bg/i.test(v.lang); }); canSpeak = v.length > 0; };
+      pickVoice(); speechSynthesis.onvoiceschanged = pickVoice;
+    }
+  } catch (e) {}
+  function say(text) {
+    try { var u = new SpeechSynthesisUtterance(text); u.lang = 'bg-BG'; u.rate = .85; speechSynthesis.cancel(); speechSynthesis.speak(u); } catch (e) {}
+  }
+  // vurgulu ünlü (ünlü + U+0301) → renkli, altı çizili harf
+  function stressHTML(f) {
+    return esc(f).replace(/([аеиоуъюяАЕИОУЪЮЯ])\u0301/g, '<span class="sv">$1</span>');
+  }
+  function entryHTML(e, pre) {
+    var h = '';
+    var form = e.f;
+    if (pre) form = pre + '-' + form;
+    h += '<div class="pw" lang="bg">' + stressHTML(form) + '</div>';
+    h += '<div class="pp">okunuş: ' + esc(e.p) + (/\u0301/.test(e.f) ? ' · altı çizili harf vurgulu' : '') + '</div>';
+    var tr = e.tr;
+    if (pre === 'по') tr = 'daha ' + tr; else if (pre === 'най') tr = 'en ' + tr;
+    h += '<div class="ptr">' + esc(tr) + '</div>';
+    h += '<div class="pg">' + esc(e.g) + '</div>';
+    if (e.l) h += '<div class="pl">kök / sözlük biçimi: <b lang="bg">' + stressHTML(e.l) + '</b></div>';
+    if (pre) h += '<div class="pn">' + (pre === 'по' ? 'по- = daha (karşılaştırma)' : 'най- = en (üstünlük)') + '</div>';
+    if (e.n) h += '<div class="pn">💡 ' + esc(e.n) + '</div>';
+    return h;
+  }
+  function showPop(el) {
+    var key = el.getAttribute('data-k'), pre = el.getAttribute('data-pre') || '';
+    var list = DICT[key]; if (!list) return;
+    var h = canSpeak ? '<button class="say" type="button" data-say="' + esc(el.textContent) + '">🔊</button>' : '';
+    h += entryHTML(list[0], pre);
+    for (var i = 1; i < list.length; i++) h += '<div class="alt">' + entryHTML(list[i], pre) + '</div>';
+    pop.innerHTML = h;
+    if (popFor) popFor.classList.remove('act');
+    popFor = el; el.classList.add('act'); popY = window.scrollY;
+    pop.classList.add('on');
+    var r = el.getBoundingClientRect(), pw = pop.offsetWidth, ph = pop.offsetHeight;
+    var vw = document.documentElement.clientWidth, vh = window.innerHeight;
+    var left = Math.min(Math.max(12, r.left + r.width / 2 - pw / 2), vw - pw - 12);
+    var top = r.bottom + 8;
+    if (top + ph > vh - 12) top = Math.max(12, r.top - ph - 8);
+    pop.style.left = left + 'px'; pop.style.top = top + 'px';
+  }
+  function hidePop() { pop.classList.remove('on'); if (popFor) popFor.classList.remove('act'); popFor = null; }
+
+  // Basılı tutma ve dokunma ayrımı: 450 ms sonra kutu açılır; daha kısa dokunuşta da açılır.
+  // Parmak kayarsa (kaydırma) iptal edilir; sistem metin seçme menüsü kelimelerde kapalıdır.
+  var press = null;
+  document.addEventListener('pointerdown', function (ev) {
+    var w = ev.target.closest && ev.target.closest('.w');
+    if (!w) { if (!ev.target.closest('#pop')) hidePop(); return; }
+    press = { el: w, x: ev.clientX, y: ev.clientY, fired: false };
+    w.classList.add('press');
+    press.t = setTimeout(function () { if (press && press.el === w) { press.fired = true; showPop(w); try { navigator.vibrate && navigator.vibrate(12); } catch (e) {} } }, 450);
+  });
+  document.addEventListener('pointermove', function (ev) {
+    if (press && (Math.abs(ev.clientX - press.x) > 10 || Math.abs(ev.clientY - press.y) > 10)) cancelPress();
+  });
+  function cancelPress() { if (!press) return; clearTimeout(press.t); press.el.classList.remove('press'); press = null; }
+  document.addEventListener('pointerup', function (ev) {
+    if (!press) return;
+    var p = press; clearTimeout(p.t); p.el.classList.remove('press'); press = null;
+    if (!p.fired) showPop(p.el);
+  });
+  document.addEventListener('pointercancel', cancelPress);
+  document.addEventListener('contextmenu', function (ev) { if (ev.target.closest && ev.target.closest('.w')) ev.preventDefault(); });
+  document.addEventListener('keydown', function (ev) {
+    if (ev.key === 'Escape') { hidePop(); closeMenus(); }
+    if ((ev.key === 'Enter' || ev.key === ' ') && ev.target.classList && ev.target.classList.contains('w')) { ev.preventDefault(); showPop(ev.target); }
+  });
+  // Kutu açıldıktan sonra sayfa belirgin şekilde kayarsa kapat
+  window.addEventListener('scroll', function () { if (popFor && Math.abs(window.scrollY - popY) > 40) hidePop(); }, { passive: true });
+  pop.addEventListener('click', function (ev) { var b = ev.target.closest('[data-say]'); if (b) say(b.getAttribute('data-say')); });
+
+  // ---------------- tema ----------------
+  var SKINS = [
+    ['auto', 'Sistem / otomatik', 'linear-gradient(135deg,#f4f6f3 50%,#101614 50%)'],
+    ['light', 'Açık', '#f4f6f3'], ['sepia', 'Sepya (kitap)', '#f3ead8'], ['dark', 'Koyu', '#101614'],
+    ['night', 'Gece mavisi', '#0c1424'], ['contrast', 'Yüksek kontrast', '#000']];
+  function applySkin() {
+    var root = document.documentElement;
+    if (S.skin === 'auto') root.removeAttribute('data-skin'); else root.setAttribute('data-skin', S.skin);
+    var v = document.getElementById('view'); if (v) v.style.zoom = String(1 + S.fs * 0.08);
+  }
+  function renderSkinMenu() {
+    var h = SKINS.map(function (s) {
+      return '<button class="skin' + (S.skin === s[0] ? ' on' : '') + '" data-skin="' + s[0] + '"><span class="sw" style="background:' + s[2] + '"></span>' + s[1] + '</button>';
+    }).join('');
+    h += '<div class="fs">Yazı boyutu <button data-fs="-1" aria-label="Küçült">A−</button><button data-fs="1" aria-label="Büyüt">A+</button></div>';
+    $('#skinMenu').innerHTML = h;
+  }
+  $('#skinBtn').addEventListener('click', function (ev) { ev.stopPropagation(); renderSkinMenu(); $('#skinMenu').classList.toggle('on'); });
+  $('#skinMenu').addEventListener('click', function (ev) {
+    ev.stopPropagation();
+    var b = ev.target.closest('[data-skin]'); if (b) { S.skin = b.getAttribute('data-skin'); save(); applySkin(); renderSkinMenu(); }
+    var f = ev.target.closest('[data-fs]'); if (f) { S.fs = Math.max(-1, Math.min(3, S.fs + (+f.getAttribute('data-fs')))); save(); applySkin(); }
+  });
+  document.addEventListener('click', function (ev) { if (!ev.target.closest('#skinMenu')) $('#skinMenu').classList.remove('on'); });
+  function closeMenus() { $('#skinMenu').classList.remove('on'); document.body.classList.remove('menu'); }
+
+  // ---------------- yan menü ----------------
+  $('#menuBtn').addEventListener('click', function () { document.body.classList.toggle('menu'); });
+  $('#scrim').addEventListener('click', closeMenus);
+  function renderSide() {
+    var h = '', lv = '';
+    MODS.forEach(function (m, i) {
+      if (m.level !== lv) {
+        lv = m.level;
+        var n = MODS.filter(function (x) { return x.level === lv; }).length;
+        h += '<div class="lvl"><span>' + lv + (lv === 'A1' ? ' · Başlangıç' : ' · Temel') + '</span><span>' + n + ' ders</span></div>';
+      }
+      var best = S.best[m.id], st = best != null ? (best === 100 ? '★' : best + '%') : (S.seen[m.id] ? '•' : '');
+      h += '<button class="lesson' + (cur && cur.id === m.id ? ' on' : '') + '" data-go="' + m.id + '">' +
+        '<span class="n">' + (i + 1) + '</span><span class="tt"><div class="t1">' + esc(m.title) + '</div><div class="t2" lang="bg">' + esc(m.title_bg) + '</div></span>' +
+        '<span class="st" title="Alıştırma sonucu">' + st + '</span></button>';
+    });
+    h += '<div class="foot">Konu sırası “Здравейте!” (A1–A2) ders kitabını izler; anlatımlar, örnekler ve okuma metinleri bu uygulama için yazılmıştır.</div>';
+    $('#side').innerHTML = h;
+  }
+  $('#side').addEventListener('click', function (ev) { var b = ev.target.closest('[data-go]'); if (b) { location.hash = b.getAttribute('data-go'); closeMenus(); } });
+
+  // ---------------- ders görünümü ----------------
+  var cur = null, tab = 'g', quizState = null;
+  var KIND = { tr: '🇹🇷 Türkçeyle karşılaştır', warn: '⚠️ Dikkat', key: '⭐ Önemli', tip: '💡 İpucu' };
+
+  function blockHTML(b) {
+    var h = '<section class="block">';
+    if (b.t === 'text') {
+      if (b.kind) h += '<div class="callout ' + b.kind + '"><span class="tag">' + KIND[b.kind] + '</span><h3>' + rich(b.title) + '</h3><div class="prose">' + richBlock(b.body) + '</div></div>';
+      else h += '<h3>' + rich(b.title) + '</h3><div class="prose">' + richBlock(b.body) + '</div>';
+    } else if (b.t === 'table') {
+      h += '<h3>' + rich(b.title) + '</h3><div class="tbl"><table>';
+      if (b.headers.some(function (x) { return x; })) h += '<thead><tr>' + b.headers.map(function (x) { return '<th>' + esc(x) + '</th>'; }).join('') + '</tr></thead>';
+      h += '<tbody>' + b.rows.map(function (r) {
+        return '<tr>' + r.map(function (c) { return '<td' + (CYR.test(c) ? ' class="bgc"' : '') + '>' + rich(c) + '</td>'; }).join('') + '</tr>';
+      }).join('') + '</tbody></table></div>';
+      if (b.note) h += '<div class="note">💡 ' + rich(b.note) + '</div>';
+    } else if (b.t === 'ex') {
+      h += '<h3>' + rich(b.title) + '</h3><div class="exs' + (S.showP ? '' : ' hidep') + '">' + b.items.map(function (it) {
+        return '<div class="ex"><div class="b" lang="bg">' + rich(it.bg) + '</div><div class="p">' + esc(it.p || '') + '</div><div class="t">' + esc(it.tr) + '</div></div>';
+      }).join('') + '</div>';
+    }
+    return h + '</section>';
+  }
+
+  function render() {
+    var m = cur; if (!m) return;
+    var idx = MODS.indexOf(m);
+    var h = '<div class="head"><div class="ref">' + m.level + ' · ' + esc(m.ref) + '</div><h2>' + esc(m.title) + '</h2><div class="bgt" lang="bg">' + rich(m.title_bg) + '</div><p class="goal">' + esc(m.goal) + '</p></div>';
+    h += '<div class="tabs" role="tablist">' +
+      '<button class="tab' + (tab === 'g' ? ' on' : '') + '" data-tab="g">Gramer ve Örnekler</button>' +
+      '<button class="tab' + (tab === 'r' ? ' on' : '') + '" data-tab="r">Okuma Metni</button>' +
+      '<button class="tab' + (tab === 'q' ? ' on' : '') + '" data-tab="q">Alıştırma<span class="cnt">' + (S.best[m.id] != null ? S.best[m.id] + '%' : m.quiz.length) + '</span></button></div>';
+    if (S.hint) h += '<div class="hint"><span>👆</span><span>Altı noktalı <b>Bulgarca kelimelere dokun</b> ya da <b>basılı tut</b>: Türkçe anlamı, okunuşu ve dilbilgisi bilgisi açılır. Okunuşta <b>BÜYÜK</b> yazılan hece vurguludur.</span><button class="x" data-x="hint" aria-label="Kapat">×</button></div>';
+    if (tab === 'g') {
+      h += '<div class="read-tools"><button class="toggle' + (S.showP ? ' on' : '') + '" data-tg="p">Okunuşu göster</button></div>';
+      h += m.blocks.map(blockHTML).join('');
+    } else if (tab === 'r') h += readingHTML(m);
+    else h += quizHTML(m);
+    h += '<div class="pager">' +
+      (idx > 0 ? '<button class="btn ghost" data-go="' + MODS[idx - 1].id + '">← ' + esc(MODS[idx - 1].ref) + '</button>' : '<span></span>') +
+      (idx < MODS.length - 1 ? '<button class="btn" data-go="' + MODS[idx + 1].id + '">' + esc(MODS[idx + 1].ref) + ' →</button>' : '<span></span>') + '</div>';
+    $('#view').innerHTML = h;
+    $('#topSub').textContent = m.ref + ' · ' + m.title;
+  }
+
+  function readingHTML(m) {
+    var r = m.reading;
+    var h = '<div class="read-tools">' +
+      '<button class="toggle' + (S.showTr ? ' on' : '') + '" data-tg="tr">Çeviriyi göster</button>' +
+      '<button class="toggle' + (S.showP ? ' on' : '') + '" data-tg="p">Okunuşu göster</button></div>';
+    h += '<article class="story"><h3 lang="bg">' + rich(r.title) + '</h3><div class="st2">' + esc(r.title_tr) + '</div>';
+    r.sents.forEach(function (s, i) {
+      h += '<div class="sent"><div class="b" lang="bg">' + rich(s.bg) + '</div>' +
+        (S.showP ? '<div class="p">' + esc(s.p || '') + '</div>' : '') +
+        '<div class="t" data-t="' + i + '"' + (S.showTr ? '' : ' hidden') + '>' + esc(s.tr) + '</div>' +
+        (S.showTr ? '' : '<button class="rv" data-rv="' + i + '">çeviri</button>') + '</div>';
+    });
+    h += '</article>';
+    h += '<section class="notes block"><h3>Metindeki dilbilgisi notları</h3><ul class="prose">' + r.notes.map(function (n) { return '<li>' + rich(n) + '</li>'; }).join('') + '</ul></section>';
+    return h;
+  }
+
+  // ---------------- alıştırma ----------------
+  function shuffle(a) { a = a.slice(); for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+  function startQuiz(m) {
+    quizState = { id: m.id, ans: {}, items: m.quiz.map(function (q) {
+      if (q.k === 'order') {
+        var toks = q.a.replace(/[.,!?„“]/g, '').split(/\s+/).filter(Boolean);
+        return { q: q, tiles: shuffle(toks.concat(q.x)), picked: [] };
+      }
+      return { q: q, order: shuffle(q.o.map(function (_, i) { return i; })) };
+    }) };
+  }
+  function plainHTML(s) { return esc(s); }
+  function quizHTML(m) {
+    if (!quizState || quizState.id !== m.id) startQuiz(m);
+    var st = quizState, done = Object.keys(st.ans).length, right = 0;
+    for (var k in st.ans) if (st.ans[k]) right++;
+    var h = '';
+    if (done === st.items.length) {
+      var pct = Math.round(right * 100 / st.items.length);
+      h += '<div class="score"><div class="big">' + pct + '%</div><div><b>' + right + ' / ' + st.items.length + ' doğru.</b><br>' +
+        (pct === 100 ? 'Harika! Bu dersi tamamladın.' : pct >= 70 ? 'Güzel! Yanlışlarını aşağıda gözden geçir.' : 'Anlatıma bir kez daha göz at ve yeniden dene.') +
+        '</div><button class="btn" data-q="again" style="margin-left:auto">Yeniden dene</button></div>';
+    } else h += '<p class="note" style="margin-top:0">Her sorudan sonra açıklama çıkar. Seçeneklerde kelime çevirisi kapalıdır.</p>';
+    st.items.forEach(function (it, i) {
+      var q = it.q, a = st.ans[i];
+      h += '<div class="qcard"><div class="qn">Soru ' + (i + 1) + ' · ' + ({ fill: 'Boşluğu doldur', pick: 'Doğru çeviriyi seç', order: 'Cümleyi kur' })[q.k] + '</div>';
+      if (q.k === 'fill') {
+        var parts = q.q.split('___');
+        h += '<div class="qt" lang="bg">' + rich(parts[0]) + '<span class="blank">' + (a != null ? esc(q.o[0]) : '…') + '</span>' + rich(parts.slice(1).join('___')) + '</div>';
+        if (q.tr) h += '<div class="qtr">' + esc(q.tr) + '</div>';
+      } else if (q.k === 'pick') h += '<div class="qt">🇹🇷 ' + esc(q.q) + '</div>';
+      else h += '<div class="qt">🇹🇷 ' + esc(q.q) + '</div>';
+      if (q.k !== 'order') {
+        h += '<div class="opts">' + it.order.map(function (oi) {
+          var cls = 'opt';
+          if (a != null) { if (oi === 0) cls += ' ok'; else if (it.chosen === oi) cls += ' no'; }
+          return '<button class="' + cls + '" lang="bg" data-qi="' + i + '" data-oi="' + oi + '"' + (a != null ? ' disabled' : '') + '>' + plainHTML(q.o[oi]) + '</button>';
+        }).join('') + '</div>';
+      } else {
+        h += '<div class="ord-out" lang="bg">' + it.picked.map(function (ti, pi) { return '<button class="chip" data-qi="' + i + '" data-un="' + pi + '"' + (a != null ? ' disabled' : '') + '>' + plainHTML(it.tiles[ti]) + '</button>'; }).join('') + '</div>';
+        h += '<div class="opts" lang="bg">' + it.tiles.map(function (t, ti) {
+          return '<button class="chip' + (it.picked.indexOf(ti) >= 0 ? ' used' : '') + '" data-qi="' + i + '" data-ti="' + ti + '"' + (a != null ? ' disabled' : '') + '>' + plainHTML(t) + '</button>';
+        }).join('') + '</div>';
+        if (a == null) h += '<div class="qbar"><button class="btn" data-qi="' + i + '" data-check="1"' + (it.picked.length ? '' : ' disabled') + '>Kontrol et</button></div>';
+      }
+      if (a != null) {
+        var full = q.k === 'fill' ? q.q.replace('___', q.o[0]) : q.k === 'pick' ? q.o[0] : q.a;
+        h += '<div class="fb ' + (a ? 'ok' : 'no') + '">' + (a ? '✓ Doğru! ' : '✗ Doğrusu: ') + '<span class="ans" lang="bg">' + rich(full) + '</span>' +
+          (q.why ? '<div>💡 ' + rich(q.why) + '</div>' : '') + '</div>';
+      }
+      h += '</div>';
+    });
+    return h;
+  }
+  function finishCheck() {
+    var st = quizState, m = cur;
+    if (Object.keys(st.ans).length === st.items.length) {
+      var right = 0; for (var k in st.ans) if (st.ans[k]) right++;
+      var pct = Math.round(right * 100 / st.items.length);
+      if (S.best[m.id] == null || pct > S.best[m.id]) S.best[m.id] = pct;
+      save(); renderSide();
+    }
+  }
+
+  $('#view').addEventListener('click', function (ev) {
+    var t = ev.target.closest('button'); if (!t) return;
+    if (t.dataset.tab) { tab = t.dataset.tab; render(); window.scrollTo(0, 0); return; }
+    if (t.dataset.go) { location.hash = t.dataset.go; return; }
+    if (t.dataset.x === 'hint') { S.hint = false; save(); render(); return; }
+    if (t.dataset.tg === 'tr') { S.showTr = !S.showTr; save(); render(); return; }
+    if (t.dataset.tg === 'p') { S.showP = !S.showP; save(); render(); return; }
+    if (t.dataset.rv != null) { var el = $('[data-t="' + t.dataset.rv + '"]'); el.hidden = !el.hidden; t.textContent = el.hidden ? 'çeviri' : 'gizle'; return; }
+    if (t.dataset.q === 'again') { startQuiz(cur); render(); window.scrollTo(0, 0); return; }
+    if (t.dataset.qi != null) {
+      var i = +t.dataset.qi, it = quizState.items[i];
+      if (t.dataset.oi != null) { it.chosen = +t.dataset.oi; quizState.ans[i] = it.chosen === 0; finishCheck(); keep(render); return; }
+      if (t.dataset.ti != null) { var ti = +t.dataset.ti; if (it.picked.indexOf(ti) < 0) it.picked.push(ti); keep(render); return; }
+      if (t.dataset.un != null) { it.picked.splice(+t.dataset.un, 1); keep(render); return; }
+      if (t.dataset.check) {
+        var norm = function (s) { return s.toLowerCase().replace(/[.,!?„“]/g, '').replace(/\s+/g, ' ').trim(); };
+        var built = it.picked.map(function (x) { return it.tiles[x]; }).join(' ');
+        quizState.ans[i] = norm(built) === norm(it.q.a); finishCheck(); keep(render); return;
+      }
+    }
+  });
+  function keep(fn) { var y = window.scrollY; fn(); window.scrollTo(0, y); }
+
+  // ---------------- yönlendirme (#a1-01 gibi) ----------------
+  function route() {
+    var id = (location.hash || '').slice(1);
+    var m = MODS.filter(function (x) { return x.id === id; })[0] || MODS.filter(function (x) { return x.id === S.last; })[0] || MODS[0];
+    if (cur !== m) { tab = 'g'; quizState = null; }
+    cur = m; S.last = m.id; S.seen[m.id] = 1; save();
+    hidePop(); renderSide(); render(); window.scrollTo(0, 0);
+  }
+  window.addEventListener('hashchange', route);
+  applySkin(); route();
+})();
+</script>
